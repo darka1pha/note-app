@@ -2,10 +2,11 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Next.js PWA',
-    short_name: 'NextPWA',
-    description: 'A Progressive Web App built with Next.js',
+    name: 'Notiva - Note Taking App',
+    short_name: 'Notiva',
+    description: 'An open source note taking app',
     start_url: '/',
+    scope: '.',
     display: 'standalone',
     background_color: '#ffffff',
     theme_color: '#000000',
@@ -21,5 +22,9 @@ export default function manifest(): MetadataRoute.Manifest {
         type: 'image/png',
       },
     ],
+    dir: 'ltr',
+    categories: ['productivity'],
+    lang: 'en-US',
+    orientation: 'portrait-primary',
   };
 }
