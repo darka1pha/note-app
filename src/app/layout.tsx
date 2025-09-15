@@ -15,7 +15,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Notiva - Note Taking App',
+  applicationName: 'Notiva',
   description: 'An open source note taking app',
+  appleWebApp: {
+    capable: true,
+    title: 'Notiva - Note Taking App',
+    statusBarStyle: 'default',
+    startupImage: {
+      url: '/assets/manifest-icons/apple-touch-icon.png',
+      media:
+        '(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)',
+    },
+  },
 };
 
 export default function RootLayout({
