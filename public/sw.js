@@ -10,7 +10,6 @@ const URLS_TO_CACHE = [
   '/globe.svg',
   '/vercel.svg',
   '/window.svg',
-  // '/favicon.ico',
 ];
 
 const CACHE_NAME = 'note-app';
@@ -27,7 +26,10 @@ self.addEventListener('fetch', (event) => {
       fetch(event.request)
         .then((response) => {
           const clone = response.clone();
-
+          // To cache all pages
+          // caches
+          //   .open(CACHE_NAME)
+          //   .then((cache) => cache.put(event.request, clone));
           return response;
         })
         .catch(() =>
